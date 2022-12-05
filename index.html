@@ -79,7 +79,9 @@
           style="background-color: purple; color: white; height: 30px;width: 120px; margin-left: 10px;">
           <p style="margin-top: -4px;">Agregar</p>
         </button>
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+        <!-- Inicial construccion del modal -->
+        <div class="modal fade principal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="modal-header">
@@ -87,7 +89,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
 
-              <!-- Inicia el modal -->
+              <!-- Inicia el modal para seleccionar productos -->
               <form action="" id="productos-form lista_compras" class="card-body">
                 <div class="modal-body" id="modal-body">
                   <div class="container" style="margin-top: 20px;" id="imagen">
@@ -154,15 +156,16 @@
             </div>
           </div>
         </div>
+        <!-- aqui finaliza -->
       </div>
     </div>
 
-
+    <!-- Aqui se agregan los productos -->
     <div class="container" id="productos" style="margin-top: 10px; border: solid 1px;">
 
     </div>
 
-
+<!-- Se agrega la paginacion para  -->
     <div class="container" style="margin-top: 10px;">
       <nav aria-label="Page navigation example" style="margin-top: 20px;">
         <ul class="pagination justify-content-center">
@@ -181,14 +184,6 @@
 
 
   </div>
-
-
-
-  </div>
-
-
-
-
 
 
   <script src="./scritp/script.js"></script>

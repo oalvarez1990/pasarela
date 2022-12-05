@@ -54,3 +54,10 @@ body {
 #datos {
   text-align: center;
 }
+.principal{
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+
+}
