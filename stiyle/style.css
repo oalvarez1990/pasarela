@@ -1,0 +1,36 @@
+body {
+  background-color: rgb(235, 217, 255);
+}
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+  color: white;
+}
+
+.menu{
+  display: flex;
+gap: 216px;
+  justify-content: space-between;
+  align-items: center;
+ 
+
+}
+
+
+#superior {
+  display: flex;
+  justify-content: center;
+}
+
+#imagen {
+  justify-content: center;
+}
+
+#datos {
+  text-align: center;
+}
