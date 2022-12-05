@@ -1,20 +1,20 @@
-(function () {
-  var updateButton = document.getElementById("updateDetails");
-  var cancelButton = document.getElementById("cancel");
-  var compra_modal = document.getElementById("btn");
+// (function () {
+//   var updateButton = document.getElementById("updateDetails");
+//   var cancelButton = document.getElementById("cancel");
+//   var compra_modal = document.getElementById("btn");
 
   // Update button opens a modal dialog
-  updateButton.addEventListener("click", function () {
-    console.log('Bien')
-    compra_modal.showModal();
-    console.log('aquiiiiiiiiiiiii')
-  });
+  // updateButton.addEventListener("click", function () {
+  //   console.log('Bien')
+  //   compra_modal.showModal();
+  //   console.log('aquiiiiiiiiiiiii')
+  // });
 
   // Form cancel button closes the dialog box
-  cancelButton.addEventListener("click", function () {
-    compra_modal.close();
-  });
-})();
+//   cancelButton.addEventListener("click", function () {
+//     compra_modal.close();
+//   });
+// })();
 
 // crear un constructor para agregar los productos 
 class productos{
@@ -80,3 +80,32 @@ class Interfaz_usuario{
     }
   }
 }
+// DOM events
+const compra_modal = document.getElementById('compra_modal');
+compra_modal.addEventListener('submit', function(e){
+  e.preventDefault();
+  // leer los datos del formulario
+  const imagen = document.getElementById('imagen').value;
+  const UID = document.getElementById('UID').value;
+  const Referencia = document.getElementById('Referencia').value;
+  const Nombre = document.getElementById('Nombre').value;
+  const Categoria = document.getElementById('Categoria').value;
+  const Subcategoria = document.getElementById('Subcategoria').value;
+  // crear un objeto producto
+  const producto = new productos(imagen, UID, Referencia, Nombre, Categoria, Subcategoria);
+  // crear un objeto interfaz
+  const interfaz = new Interfaz_usuario();
+  // validar los campos del formulario
+  if(imagen === '' || UID === '' || Referencia === '' || Nombre === '' || Categoria === '' || Subcategoria === ''){
+    // mostrar un mensaje de error
+    interfaz.mostrar_mensaje('Error: Debe llenar todos los campos', 'error');
+  }else{
+    // agregar un producto a la lista de compras
+    interfaz.agregar_producto_lista(producto);
+    // mostrar un mensaje de producto agregado
+    interfaz.mostrar_mensaje('Producto agregado', 'correcto');
+    // limpiar los campos del formulario
+    interfaz.limpiar_campos();
+  }
+}
+);
