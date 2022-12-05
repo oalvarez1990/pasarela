@@ -16,7 +16,7 @@
 //   });
 // })();
 
-// crear un constructor para agregar los productos 
+// constructor para agregar los productos 
 class productos{
   constructor(imagen, UID, Referencia, Nombre, Categoria, Subcategoria){
     this.imagen = imagen;
@@ -82,7 +82,9 @@ class Interfaz_usuario{
 }
 // DOM events
 const compra_modal = document.getElementById('compra_modal');
+console.log('Escuchando');
 compra_modal.addEventListener('submit', function(e){
+console.log('Escuchando')
   e.preventDefault();
   // leer los datos del formulario
   const imagen = document.getElementById('imagen').value;

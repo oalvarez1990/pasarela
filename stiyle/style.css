@@ -1,7 +1,30 @@
-body {
-  background-color: rgb(235, 217, 255);
+*{
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
 }
 
+body {
+  background-color: #F5F5F5;
+
+}
+.navbar .omar{
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  padding: 40px 20px;
+  /* gap: 213px; */
+  
+  /* position: absolute; */
+  /* width: 1704px; */
+  /* height: 135px; */
+  /* left: 108px; */
+  /* top: 47px; */
+  
+  background: #FFFFFF;
+  border-radius: 20px;
+}
 .icon {
   display: inline-block;
   width: 1em;
