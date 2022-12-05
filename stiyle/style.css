@@ -12,15 +12,12 @@ body {
   color: white;
 }
 
-.menu{
+.menu {
   display: flex;
-gap: 216px;
+  gap: 150px;
   justify-content: space-between;
   align-items: center;
- 
-
 }
-
 
 #superior {
   display: flex;

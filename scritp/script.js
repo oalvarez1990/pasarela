@@ -1,7 +1,7 @@
 (function () {
   var updateButton = document.getElementById("updateDetails");
   var cancelButton = document.getElementById("cancel");
-  var compra_modal = document.getElementById("compra_modal");
+  var compra_modal = document.getElementById("btn");
 
   // Update button opens a modal dialog
   updateButton.addEventListener("click", function () {
